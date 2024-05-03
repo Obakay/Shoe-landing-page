@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(to right, white, rgb(161, 60, 77));
+    background-size: cover;
+    background-position: center;
+    
+}
+section nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+section nav .logo{
+    font-size: 35px;
+    color: palevioletred;
+    cursor: pointer;
+    margin: 5px 0;
+    position: relative;
+    left: -4%;
+}
+section nav .logo span{
+    color: rgb(12, 12, 11);
+    text-decoration: underline;
+}
+section nav ul{
+    list-style: none;
+}
+section nav ul li{
+    display: inline;
+    margin: 5px 15px;
+}
+section nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+
+}
+section nav ul li a:hover{
+    color: pink;
+}
+section nav .icons i{
+    margin: 0 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+
+}
+section nav .icons i:hover{
+    color: pink;  
+}
+section .main .main-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+section .main .main-content .main-text h1{
+    font-size: 90px;
+    line-height: 70px;
+    font-family: pyxidium quick;
+    background: linear-gradient(to right, rgb(189, 46, 70), rgb(12, 1, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 45px;
+    left: 5%;
+}
+section .main .main-content .main-text h1 span{
+    font-size: 70px;
+    background: linear-gradient(to right, rgb(189, 46, 70), rgb(12, 1, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+section .main .main-content .main-text p{
+    width: 600px;
+    text-align: justify;
+    line-height: 21px;
+    top: 85px;
+    position: relative;
+    left: 5%;
+
+}
+section .main .main-content .main-image img{
+    width: 650px;
+    top: 74px;
+    left: 20px;
+    position: relative;
+
+}
+section .main .social-icon{
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    transform: translate(-50%, -50%);
+    font-size: 19px;
+
+}
+section .main .social-icon i{
+    margin: 8px, 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+section .main .social-icon i:hover{
+    color: palevioletred;
+
+}
+section .main .button{
+    position: absolute;
+    left: 6%;
+    border-radius: 30px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, pink, gray);
+}
+section .main .button a{
+    color: black;
+    text-decoration: none;
+}
+section .main .button i{
+    color: black;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+section .main .button:hover i{
+    transform: translate(6px);
+}
+
+
+/* products */
+
+.products{
+    width: 100%;
+    height: 140vh;
+    padding: 20px 0;
+}
+.products h1{
+    margin: 35px 0;
+    font-size: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, rgb(189, 46, 70), rgb(12, 1, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.products .box{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    grid-gap: 25px 0;
+}
+
+.products .box .card{
+    width: 290px;
+    height: 440px;
+    box-shadow: 0 0 8px palevioletred;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    background: pink;
+}
+.products .box .card .small-card{
+    display: flex;
+    margin: 10px;
+    flex-flow: column;
+    transform: translateX(-20px);
+    position: absolute;
+    transition: 0.3s;
+    opacity: 0;
+}
+.products .box .card:hover .small-card{
+    transform: translate(2px);
+    cursor: pointer;
+    opacity: 1;
+}
+.products .box .card .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products .box .card .image img{
+    width: 150px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+.products .box .card:hover .image img{
+   transform: scale(1.1);
+
+}
+
+.products .box .card .small-card i{
+    width: 30px;
+    height: 35px;
+    margin: 2px 0;
+    line-height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    transition: 0.2s;
+}
+.products .box .card .small-card i:hover{
+    color: rgb(50, 67, 160);
+}
+.products .box .card .products-text h2{
+    font-size: 30px;
+    margin-top: 15px;
+
+}
+
+.products .box .card .products-text p{
+    color: rgb(157, 158, 151);
+    line-height: 21px;
+    margin: 8px 0;
+}
+.products .box .card .products-text h3{
+    margin: 7px 0;
+}
+.products .box .card .products-text .products-stars{
+    color: orange;
+   margin-bottom: 19px;
+   cursor: pointer;
+}
+.products .box .card .products-text .btn{
+    text-decoration: none;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, rgb(212, 72, 72), rgb(37, 30, 105));
+    color: white;
+}
+
+
+/* About */
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 35px 0;
+}
+
+.about h1{
+    font-size: 60px;
+    margin-top: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(46, 17, 209);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    
+}
+
+.about h1 span{
+    background-image: linear-gradient(to right, rgb(177, 63, 143), rgb(60, 16, 117));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 15px;
+}
+
+.about .about-main{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.about .about-main .about-image{
+    display: flex;
+    margin-top: 50px;
+
+}
+.about .about-main .about-image .about-small-image{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 15px;
+
+}
+
+.about .about-main .about-image .about-small-image img{
+    height: 92px;
+    margin: 5px 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(42, 27, 83), rgb(170, 78, 124));
+    display: block;
+    border-radius: 6px;
+    padding: 5px 5px;
+    box-shadow: 0 0 6px rgb(12, 12, 12);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.about .about-main .about-image .about-small-image img:hover{
+    opacity: 1;
+}
+
+.about .about-main .image-container{
+    padding: 10px;
+    display: flex;
+}
+.about .about-main .image-container img{
+    border: 3px solid blueviolet;
+    border-radius: 20px;
+    height: 430px;
+    padding: 30px;
+    box-shadow: 0 0 8px blueviolet;
+}
+
+.about .about-main .about-text{
+    margin-top: 45px;
+}
+.about .about-main .about-text p{
+    background-image: linear-gradient(to right, rgb(177, 63, 143), rgb(60, 16, 117));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 22px;
+    width: 600px;
+    text-align: justify;
+    padding: 25px 30px;
+    border: 2px solid plum;
+    border-radius: 20px;
+    box-shadow: 0 0 8px blueviolet;
+}
+
+.about .about-btn{
+    color: blueviolet;
+    background: none;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 25px;
+    border: 2px solid plum;
+    text-decoration: none;
+    box-shadow: 0 0 8px blueviolet;
+}
+
+.about .about-btn:hover{
+    border: 2px solid transparent;
+    background: rgb(95, 25, 74);
+    color: white;
+}
+
+
+/* Review */
+
+.review{
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+    margin-top: 45rem;
+}
+
+.review h1{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.review h1 span{
+     background-image: linear-gradient(to right, pink, rgb(87, 32, 87));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 15px;
+}
+
+.review .review-box{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 7%;
+    margin: 0 auto;
+}
+
+.review .profile .profile-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.review .profile .profile-image:hover{
+    transform: scale(1.2);
+}
+
+.review .profile-image img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.review .profile{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.review .review-box .review-card{
+    width: 500px;
+    background: rgb(221, 186, 221);
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.review .review-box .review-card .card-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review .review-box .review-card .card-top .profile .name{
+    margin-left: 20px;
+    line-height: 22px;
+}
+
+.review .review-box .review-card .card-top .profile .name strong{
+    font-size: 20px;
+}
+
+.review .review-box .review-card .card-top .profile .name .like i{
+    display: inline-block;
+    font-size: 12px;
+    color: orange;
+}
+
+.review .review-box .review-card .comment p{
+    text-align: justify;
+    line-height: 22px;
+    margin-top: 15px;
+}
+
